@@ -4,7 +4,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-// 队列：保留了原数组的输入顺序
+/**
+ * 队列 demo：数字怎么输入的就怎么输出的
+ * */
 public class QueueCase {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
