@@ -18,7 +18,7 @@ public class ReverseCase {
             stack.push(i1);
             i++;
         }
-        System.out.println(stack.size());
+        System.out.println("栈的长度为 " + stack.size());
         System.out.println("栈依次有");
         // 输出栈里的元素
         for (int k = 0; k < 5; k++) {
