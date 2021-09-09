@@ -11,6 +11,8 @@ public class FixCapacityStack<Item> {
     }
 
     public void push(Item newStr) {
+        // 后期添加
+        if (N == a.length)  resize(2*N);
         a[N++] = newStr;
     }
 
@@ -30,5 +32,14 @@ public class FixCapacityStack<Item> {
         for (int i = 0; i < N; i++) {
             System.out.print(" " + a[i] + " ");
         }
+    }
+
+    public void resize(int cap2) {
+        Item[] items2 = (Item[]) new Object[cap2];
+        for (int i = 0; i < N; i++) {
+              items2[i] = a[i];
+        }
+        a = items2;
+        // a 总是内置的数组
     }
 }
