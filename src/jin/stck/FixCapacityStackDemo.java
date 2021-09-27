@@ -18,6 +18,6 @@ public class FixCapacityStackDemo {
             stack2.push(true);
         }
         stack2.inStack();
-        // 在 push() 中加上一行程序后就不再报错了
+        // 越界异常：在 push() 里面加行程序就不再报错了
     }
 }
