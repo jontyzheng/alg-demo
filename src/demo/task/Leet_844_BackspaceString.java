@@ -49,6 +49,7 @@ public class Leet_844_BackspaceString {
         return sbu.toString();
     }
 
+    // append 加栈
     static public String doSomething2(String s) {
         StringBuilder sbu = new StringBuilder();
         char[] arr = s.toCharArray();
