@@ -28,7 +28,7 @@ public class FixCapacityStackOfString {
 
     public void inStack() {
         for (int i = 0; i < N; i++) {
-            System.out.print(" " + a[i] + " ");
+            System.out.print(a[i] + " ");
         }
     }
 

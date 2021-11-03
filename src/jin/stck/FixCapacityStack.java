@@ -2,6 +2,7 @@ package jin.stck;
 
 /**
  * FixCapacityStack<Item>：泛型 就是一个关键字，没有对应的类
+ * 数组结构
  */
 public class FixCapacityStack<Item> {
     Item[] a;
@@ -28,7 +29,7 @@ public class FixCapacityStack<Item> {
         return a[--N];
     }
 
-    public void inStack() {
+    public void show() {
         for (int i = 0; i < N; i++) {
             System.out.print(" " + a[i] + " ");
         }

@@ -14,10 +14,10 @@ public class FixCapacityStackDemo {
         System.out.println(stack2.pop());
 
         // 容量测试
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             stack2.push(true);
         }
-        stack2.inStack();
+        stack2.show();
         // 越界异常：在 push() 里面加行程序就不再报错了
     }
 }
