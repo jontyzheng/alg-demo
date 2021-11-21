@@ -45,12 +45,36 @@ public class NodeChain {
          * 删除链的开始节点(修改链的头节点)
          * */
         System.out.println("----------");
-        System.out.println("看看链条去除头节点之后：");
         head = head.next;
+        System.out.println("看看链条去除头节点之后：");
         Node tmpHead3 = head;
         while (tmpHead3 != null) {
             System.out.println(tmpHead3.item);
             tmpHead3 = tmpHead3.next;
         }
+
+        /**
+         * 在链的尾部接上一个结点
+         * (首先需要获取链的最后一个结点的引用，然后将它指向一个新结点)
+         * */
+        System.out.println("----------");
+        // 待拼接的新节点
+        Node newLast = new Node("this");
+        // 获取最后一个结点的引用
+        // 拿一个假的开始结点过去获取
+        Node tmpHead5 = head;
+        while (tmpHead5.next != null) {
+            tmpHead5 = tmpHead5.next;
+        }
+        tmpHead5.next = newLast;
+        // 将新的结点接上链尾
+        System.out.println("给链条的链尾接上一个新结点之后：");
+        Node tmpHead6 = head;   // 原 head 不变(提前让一个临时开始结点去获取链尾的好处)
+        while (tmpHead6 != null) {
+            System.out.println(tmpHead6.item);
+            tmpHead6 = tmpHead6.next;
+        }
+        // 由于遍历链获取引用是通过不断修改链头的引用而实现的，所以在获取链尾的引用时要保证不修改原来 head 的引用
+        // (head的引用需要一直指着原链首，以用于输出)
     }
 }
