@@ -1,17 +1,17 @@
 package jin.link;
 
-import demo.link.ListNode;
+import demo.link.Node;
 
 /**
  * https://leetcode-cn.com/problems/remove-linked-list-elements/
  * reference：https://leetcode-cn.com/problems/remove-linked-list-elements/comments/4259
  * */
 public class FakeHead {
-    public ListNode removeElements(ListNode head, int val) {
+    public Node removeElements(Node head, int val) {
 
-        ListNode fakeHead = new ListNode(-1);
+        Node fakeHead = new Node(-1);
         fakeHead.next = head;
-        ListNode tmpHead = fakeHead;
+        Node tmpHead = fakeHead;
         while (tmpHead.next != null) {
             if (tmpHead.next.val == val) {
                 tmpHead.next = tmpHead.next.next;

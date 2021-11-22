@@ -7,10 +7,10 @@ package demo.link;
  * */
 public class CircleOrNot {
 
-    public boolean hasCycle(ListNode head) {
+    public boolean hasCycle(Node head) {
         if (head.next == null)
             return false;
-        ListNode tmp = head;
+        Node tmp = head;
         while (tmp.next != null) {
             // 看下一个节点的值是不是 10^6 是则说明走过了
             if (tmp.next.val == 1000000) {
@@ -25,14 +25,14 @@ public class CircleOrNot {
     }
 
     public static void main(String[] args) {
-        ListNode head = new ListNode(1);
+        Node head = new Node(1);
         //
-        ListNode tmp = head;
-        tmp.next = new ListNode(3);
-        tmp.next.next = new ListNode(2);
-        tmp.next.next.next = new ListNode(0);
-        tmp.next.next.next.next = new ListNode(-4);
-        tmp.next.next.next.next.next = new ListNode(tmp.next.next);
+        Node tmp = head;
+        tmp.next = new Node(3);
+        tmp.next.next = new Node(2);
+        tmp.next.next.next = new Node(0);
+        tmp.next.next.next.next = new Node(-4);
+        tmp.next.next.next.next.next = new Node(tmp.next.next);
         CircleOrNot kid = new CircleOrNot();
         boolean res = kid.hasCycle(tmp);
         System.out.println(res);

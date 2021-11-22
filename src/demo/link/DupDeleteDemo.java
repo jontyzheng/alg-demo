@@ -8,12 +8,12 @@ import java.util.List;
  * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/
  */
 public class DupDeleteDemo {
-    static public ListNode deleteDuplicates(ListNode head) {
+    static public Node deleteDuplicates(Node head) {
         if (head.next == null)
             return head;
-        ListNode dummy = new ListNode(0, head);
+        Node dummy = new Node(0, head);
 
-        ListNode cur = dummy;
+        Node cur = dummy;
         while (cur.next != null && cur.next.next != null) {
             if (cur.next.next.val == cur.next.val) {
                 int x = cur.next.val;
@@ -28,15 +28,15 @@ public class DupDeleteDemo {
     }
 
     public static void main(String[] args) {
-        ListNode head = new ListNode(1);
+        Node head = new Node(1);
         // 
-        ListNode tmp = head;
-        tmp.next = new ListNode(2);
-        tmp.next.next = new ListNode(3);
-        tmp.next.next.next = new ListNode(3);
-        tmp.next.next.next.next = new ListNode(3);
-        tmp.next.next.next.next.next = new ListNode(4);
-        tmp.next.next.next.next.next.next = new ListNode(5);
+        Node tmp = head;
+        tmp.next = new Node(2);
+        tmp.next.next = new Node(3);
+        tmp.next.next.next = new Node(3);
+        tmp.next.next.next.next = new Node(3);
+        tmp.next.next.next.next.next = new Node(4);
+        tmp.next.next.next.next.next.next = new Node(5);
         head = tmp;
         tmp = head;
         // [1,2,3,3,4,4,5]
