@@ -26,7 +26,7 @@ public class YangTriangle {
         if (numRows == 2) {
             return list;
         }
-        // 第2行
+        // 第2行（因为上一行行号是从 row1 里取）
         for (int i = 2; i < numRows; i++) {
             List<Integer> rowList = new ArrayList<>();
             // 开头位置
