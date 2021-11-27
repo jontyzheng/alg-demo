@@ -1,4 +1,4 @@
-package se.stack;
+package se.node;
 
 /**
  * 链栈：栈里一条链
