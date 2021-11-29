@@ -2,6 +2,14 @@ package se.stack;
 
 /**
  * 链栈：栈里一条链
+ |  头  |
+ |  8   |
+ |  8   |
+ |  8   |
+ |  |________(8)
+ ——————
+ * 出栈：摘掉链头
+ * 入栈：延长链尾
  * */
 public class ChainStack<Item> {
     private Node first; // 栈顶元素，最近添加的元素
@@ -32,6 +40,11 @@ public class ChainStack<Item> {
         return popped;
     }
     // pop 从链首摘掉一个结点(出队的地方)
+
+    public Item peek() {
+        return first.item;  // 访问链头
+    }
+    // peek 只瞄一眼链头 而不在出栈的位置摘掉节点
 
     public int size() {
         return N;
