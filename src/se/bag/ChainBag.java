@@ -45,7 +45,6 @@ public class ChainBag<Item> implements Iterable<Item> {
     }
 
 
-
     public void add(Item item) {
         Node oldFirst = this.first;
         first = new Node();
