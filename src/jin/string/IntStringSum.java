@@ -10,7 +10,7 @@ public class IntStringSum {
         // return Integer.valueOf(num1) + Integer.valueOf(num2) + "";
         int index1 = num1.length() - 1;
         int index2 = num2.length() - 1;
-        int add = 0;    // 当前位累计的和
+        int add = 0;    // 用一个变量存储末位数相加的和
         StringBuilder builder = new StringBuilder();
         /**
          * 情形1：i 提前加完
