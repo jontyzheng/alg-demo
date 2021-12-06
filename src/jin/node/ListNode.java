@@ -19,5 +19,17 @@ public class ListNode {
         this.next = next;
     }
 
+    public void print(ListNode node) {
+        ListNode tmpHead = node;
+        while (tmpHead != null) {
+            if (tmpHead.next != null) {
+                System.out.print(tmpHead.val + "--");
+            } else {
+                System.out.print(tmpHead.val);
+            }
+            tmpHead = tmpHead.next;
+        }
+    }
+
 
 }
